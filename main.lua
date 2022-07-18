@@ -2,21 +2,24 @@ tools = {"Keycard", "Baton", "Bat", "AK-74", "AK-47", "SPAS", "Taser", "Handcuff
 getgenv().spy = true
 
 function createESP(victimESP)
-    local gui = Instance.new("BillboardGui");
-    gui.Name = "ummESP";
-    gui.AlwaysOnTop = true;
-    gui.LightInfluence = 0;
-    gui.Size = UDim2.new(1.75, 0, 1.75, 0);
-    local frame = Instance.new("Frame", gui);
-    frame.BackgroundColor3 = Color3.fromRGB(170, 0, 0);
-    frame.Size = UDim2.new(1, 0, 1, 0);
-    frame.BorderSizePixel = 0;
-    local gi = gui:Clone();
-    local body = frame:Clone();
-    body.Parent = gi;
-    body.BackgroundColor3 = Color3.fromRGB(0, 170, 170);
-    
-    gui:Clone().Parent = victimESP.Character.Head;
+    if not victimESP.Character.Head:FindFirstChild("ummESP") then
+        local gui = Instance.new("BillboardGui");
+        gui.Name = "ummESP";
+        gui.AlwaysOnTop = true;
+        gui.LightInfluence = 0;
+        gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+        local frame = Instance.new("Frame", gui);
+        frame.BackgroundColor3 = Color3.fromRGB(170, 0, 0);
+        frame.Size = UDim2.new(1, 0, 1, 0);
+        frame.BorderSizePixel = 0;
+        frame.Transparency = 0.7;
+        local gi = gui:Clone();
+        local body = frame:Clone();
+        body.Parent = gi;
+        body.BackgroundColor3 = Color3.fromRGB(0, 170, 170);
+        
+        gui:Clone().Parent = victimESP.Character.Head;
+    end
 end
 
 function deleteESP(victimESP)
