@@ -3,6 +3,7 @@ getgenv().spy = true
 
 function createESP(victimESP)
     if not victimESP.Character.Head:FindFirstChild("ummESP") then
+        
         local gui = Instance.new("BillboardGui");
         gui.Name = "ummESP";
         gui.AlwaysOnTop = true;
@@ -57,3 +58,22 @@ while getgenv().spy do
     end
     wait(2) --updates every 2 seconds
 end
+
+--[[
+--Toggle Script, feel free to finish it
+while not getgenv().spy do
+    for _, players in pairs(game.Players:GetChildren()) do
+        deleteESP(players)
+    end
+    wait(7)
+end
+
+if getgenv().spy == true then
+    getgenv().spy = false
+elseif getgenv().spy == false then
+    getgenv().spy = true
+else
+    warn("Couldn't turn getgenv().spy on and off.")
+end
+
+--]]
