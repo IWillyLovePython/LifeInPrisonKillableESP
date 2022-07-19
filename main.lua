@@ -49,11 +49,11 @@ while getgenv().spy do
     for _, players in pairs(game.Players:GetChildren()) do
         if players ~= game.Players.LocalPlayer and tostring(players.Team) == "Prisoners" then
             if checkTools(players) then
-                  createESP(players)
-                else
-                    deleteESP(players)
-                end
+                createESP(players)
+            else
+                deleteESP(players)
             end
         end
+    end
     wait(2) --updates every 2 seconds
 end
