@@ -1,4 +1,4 @@
-tools = {"Keycard", "Baton", "Bat", "AK-74", "AK-47", "SPAS", "Taser", "Handcuffs", "M9", "MP5", "AWM", "Famas", "AR 15", "Riot Shield", "FAL", "Medkit", "Screwdriver", "Hammer", "TEC-9", "Luger", "Scissors", "Knife", "M1 Carabine", "DB Shotgun"}
+tools = {"Keycard", "Baton", "Bat", "AK-74", "AK-47", "SPAS", "Taser", "Handcuffs", "M9", "MP5", "AWM", "Famas", "AR 15", "Riot Shield", "FAL", "Medkit", "Screwdriver", "Hammer", "TEC-9", "Luger", "Scissors", "Knife", "M1 Carabine", "DB Shotgun", "Revolver"}
 getgenv().spy = true
 
 function createESP(victimESP)
